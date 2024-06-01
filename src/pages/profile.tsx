@@ -5,7 +5,7 @@ import useSWR, { mutate } from 'swr';
 import axios from 'axios';
 import Main from '@/layout/mainLayout';
 
-const fetcher = (url) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 const ProfilePage = () => {
   const { data, error } = useSWR('/api/user', fetcher);
