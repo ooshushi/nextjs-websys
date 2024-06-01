@@ -17,7 +17,7 @@ const ProfilePage = () => {
   return (
     <Main>
       <Container>
-        <Grid container justify="center" spacing={3}>
+        <Grid container justifyContent="center" spacing={3}>
           <Grid item xs={12} md={8}>
             <Card elevation={3}>
               <CardContent>

@@ -17,7 +17,7 @@ const ProfilePage = () => {
   return (
     <Main>
       <Container>
-        <Grid container justify="center">
+        <Grid container justifyContent="center">
           <Grid item xs={12} md={8}>
             <Card elevation={3}>
               <CardContent>
@@ -43,9 +43,9 @@ const ProfilePage = () => {
                       <FieldArray name="posts">
                         {({ push, remove }) => (
                           <div>
-                            {values.posts.map((post, index) => (
+                            {values.posts.map((post: string, index: number) => (
                               <div key={index} style={{ marginBottom: '1rem' }}>
-                                <Grid container spacing={2} alignItems="center">
+                                <Grid container spacing={2} alignItems="center" component="div">
                                   <Grid item xs={8}>
                                     <Field
                                       name={`posts.${index}.title`}
