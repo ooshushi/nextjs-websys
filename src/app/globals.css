@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --custom-foreground-rgb: 68, 68, 68;
+  --custom-background-start-rgb: 240, 240, 240;
+  --custom-background-end-rgb: 211, 211, 211;
+  --custom-primary-color: 255, 153, 153;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --custom-foreground-rgb: 209, 209, 211;
+    --custom-background-start-rgb: 157, 90, 57;
+    --custom-background-end-rgb: 102, 52, 39;
+    --custom-primary-color: 170, 136, 139;
+  }
+}
+
+body {
+  color: rgb(var(--custom-foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--custom-background-end-rgb))
+    )
+    rgb(var(--custom-background-start-rgb));
+}
+
+.post-card {
+  transition: transform 0.3s;
+  width: auto;
+  height: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.post-card:hover {
+  transform: scale(1.05);
+}
+
+@layer utilities {
+  .text-custom-balance {
+    text-wrap: balance;
+  }
+
+  .bg-custom-primary {
+    background-color: rgb(var(--custom-primary-color));
+  }
+}
